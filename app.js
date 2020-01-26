@@ -6,7 +6,7 @@ const bibleController = require('./Controller/BibleController.js');
 var app= express();
 var port =  process.env.PORT || 3000
 app.use(bodyparser.json());
-app.use(cors({origin:"https://bibleapp-front-end.herokuapp.com/"}));
+app.use(cors({origin:"https://bibleapp-front-end.herokuapp.com/*"}));
 app.use('/bible',bibleController);
 app.listen(port,()=>console.log('server started at port '+port));
 
